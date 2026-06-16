@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function WelcomeScreen({ onReady }) {
   const [visible, setVisible] = useState(false)
 
-  useState(() => {
+  useEffect(() => {
     setTimeout(() => setVisible(true), 100)
   }, [])
 

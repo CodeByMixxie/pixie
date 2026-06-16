@@ -44,7 +44,7 @@ function HomePage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: 'var(--warm-fog)', padding: '2rem 1.5rem' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: 'var(--warm-fog)', padding: '2rem 1.5rem 6rem' }}>
 
       {/* header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>

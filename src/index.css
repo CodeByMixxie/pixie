@@ -25,3 +25,14 @@ body {
 #root {
   min-height: 100vh;
 }
+button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
