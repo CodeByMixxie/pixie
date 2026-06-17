@@ -1,4 +1,4 @@
-function ClothingCard({ item }) {
+function ClothingCard({ item, onDelete }) {
   return (
     <div style={{
       borderRadius: '16px',
@@ -22,6 +22,9 @@ function ClothingCard({ item }) {
         padding: '0.5rem',
         backgroundColor: 'rgba(87, 85, 39, 0.4)',
         backdropFilter: 'blur(4px)',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
       }}>
         <p style={{
           color: 'var(--warm-fog)',
@@ -31,6 +34,21 @@ function ClothingCard({ item }) {
         }}>
           {item.category}
         </p>
+        {onDelete && (
+          <button
+            onClick={() => onDelete(item.id)}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: '0.8rem',
+              color: 'var(--warm-fog)',
+              padding: '0',
+              lineHeight: 1,
+            }}>
+            ✕
+          </button>
+        )}
       </div>
     </div>
   )

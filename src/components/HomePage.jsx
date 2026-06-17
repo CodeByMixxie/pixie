@@ -22,6 +22,12 @@ function HomePage() {
     localStorage.setItem('pixie-clothes', JSON.stringify(updated))
   }
 
+  const handleDelete = (id) => {
+    const updated = items.filter(item => item.id !== id)
+    setItems(updated)
+    localStorage.setItem('pixie-clothes', JSON.stringify(updated))
+  }
+
   const generateOutfit = () => {
     const tops = items.filter(i => TOPS.includes(i.category))
     const bottoms = items.filter(i => BOTTOMS.includes(i.category))
@@ -182,7 +188,7 @@ function HomePage() {
               gap: '0.8rem',
             }}>
               {catItems.map(item => (
-                <ClothingCard key={item.id} item={item} />
+                <ClothingCard key={item.id} item={item} onDelete={handleDelete} />
               ))}
             </div>
           </div>
